@@ -84,8 +84,33 @@
         </select>
       </div>
 
-
-
+      <div class="form-group">
+        <label for="costoEntrada">Costo de la entrada (si aplica):</label>
+        <input type="number" class="form-control" id="costoEntrada" placeholder="Ingrese el costo de la entrada">
+      </div>
+      <div class="form-group">
+        <label for="audienciaObjetivo">Audiencia objetivo del evento:</label>
+        <input type="text" class="form-control" id="audienciaObjetivo" placeholder="Ingrese la audiencia objetivo del evento">
+      </div>
+      <div class="form-group">
+        <label for="temasPrincipales">Temas principales a tratar durante el evento:</label>
+        <input type="text" class="form-control" id="temasPrincipales" placeholder="Ingrese los temas principales a tratar">
+      </div>
+      <div class="form-group">
+        <label for="necesidadesTecnicas">Necesidades técnicas específicas:</label>
+        <textarea class="form-control" id="necesidadesTecnicas" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="materialesAdicionales">¿Se proporcionarán materiales adicionales a los participantes?</label>
+        <select class="form-control" id="materialesAdicionales">
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="comentariosAdicionales">Comentarios adicionales o requisitos especiales:</label>
+        <textarea class="form-control" id="comentariosAdicionales" rows="3"></textarea>
+      </div>
 
       <button type="submit" onclick="generarPDF()" class="btn btn-primary">Enviar</button>
     </form>
