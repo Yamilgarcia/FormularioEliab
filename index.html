@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Evento</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Formulario de Evento</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/watch?v=TXvwdNM_43I">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eventos pasados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+    <h2>Formulario de Evento</h2>
+    <form class="needs-validation mt-5" action="https://formsubmit.co/yamilg620@gmail.com" method="POST"
+    novalidate>
+
+
+      <div class="form-group">
+        <label for="nombreEvento">Nombre del evento:</label>
+        <input type="text" class="form-control" id="nombreEvento" placeholder="Ingrese el nombre del evento">
+      </div>
+      <div class="form-group">
+        <label for="fechaHoraEvento">Fecha y hora del evento:</label>
+        <input type="datetime-local" class="form-control" id="fechaHoraEvento">
+      </div>
+      <div class="form-group">
+        <label for="duracionEvento">Duración estimada del evento (en horas):</label>
+        <input type="number" class="form-control" id="duracionEvento" placeholder="Ingrese la duración del evento en horas">
+      </div>
+      <div class="form-group">
+        <label for="tipoEvento">Tipo de evento:</label>
+        <input type="text" class="form-control" id="tipoEvento" placeholder="Ingrese el tipo de evento">
+      </div>
+      <div class="form-group">
+        <label for="descripcionEvento">Descripción breve del evento:</label>
+        <textarea class="form-control" id="descripcionEvento" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="plataformaTransmision">Plataforma de transmisión en línea a utilizar:</label>
+        <input type="text" class="form-control" id="plataformaTransmision" placeholder="Ingrese la plataforma de transmisión en línea">
+      </div>
+
+
+      
+      <div class="form-group">
+        <label for="nombreOrganizador">Nombre del organizador principal:</label>
+        <input type="text" class="form-control" id="nombreOrganizador" placeholder="Ingrese el nombre del organizador principal">
+      </div>
+      <div class="form-group">
+        <label for="contactoOrganizador">Información de contacto del organizador principal:</label>
+        <input type="email" class="form-control" id="contactoOrganizador" placeholder="Correo electrónico">
+        <input type="tel" class="form-control mt-2" id="contactoOrganizador" placeholder="Número de teléfono">
+      </div>
+      <div class="form-group">
+        <label for="registroPrevio">¿Se requiere registro previo para el evento?</label>
+        <select class="form-control" id="registroPrevio">
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+      </div>
+
+
+
+
+      <button type="submit" onclick="generarPDF()" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+  
+ </body>
+ </html>
