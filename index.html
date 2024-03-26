@@ -126,6 +126,52 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 
+
+  <script>
+    
+    function generarPDF() {
+       // Obtener los datos del formulario
+       var nombreEvento = document.getElementById('nombreEvento').value;
+       var fechaHoraEvento = document.getElementById('fechaHoraEvento').value;
+       var duracionEvento = document.getElementById('duracionEvento').value;
+       var tipoEvento = document.getElementById('tipoEvento').value;
+       var descripcionEvento = document.getElementById('descripcionEvento').value;
+       var plataformaTransmision = document.getElementById('plataformaTransmision').value;
+       var nombreOrganizador = document.getElementById('nombreOrganizador').value;
+       var contactoOrganizador = document.getElementById('contactoOrganizador').value;
+       var registroPrevio = document.getElementById('registroPrevio').value;
+       var costoEntrada = document.getElementById('costoEntrada').value;
+       var audienciaObjetivo = document.getElementById('audienciaObjetivo').value;
+       var temasPrincipales = document.getElementById('temasPrincipales').value;
+       var necesidadesTecnicas = document.getElementById('necesidadesTecnicas').value;
+       var materialesAdicionales = document.getElementById('materialesAdicionales').value;
+       var comentariosAdicionales = document.getElementById('comentariosAdicionales').value;
+ 
+       // Crear un nuevo documento PDF
+       var doc = new jsPDF();
+ 
+       // Agregar el contenido al PDF
+       doc.text(20, 20, 'Nombre del evento: ' + nombreEvento);
+       doc.text(20, 30, 'Fecha y hora del evento: ' + fechaHoraEvento);
+       doc.text(20, 40, 'Duración estimada del evento: ' + duracionEvento + ' horas');
+       doc.text(20, 50, 'Tipo de evento: ' + tipoEvento);
+       doc.text(20, 60, 'Descripción breve del evento: ' + descripcionEvento);
+       doc.text(20, 70, 'Plataforma de transmisión en línea: ' + plataformaTransmision);
+       doc.text(20, 80, 'Nombre del organizador principal: ' + nombreOrganizador);
+       doc.text(20, 90, 'Información de contacto del organizador principal: ' + contactoOrganizador);
+       doc.text(20, 100, '¿Se requiere registro previo? ' + registroPrevio);
+       doc.text(20, 110, 'Costo de la entrada: ' + costoEntrada);
+       doc.text(20, 120, 'Audiencia objetivo del evento: ' + audienciaObjetivo);
+       doc.text(20, 130, 'Temas principales a tratar durante el evento: ' + temasPrincipales);
+       doc.text(20, 140, 'Necesidades técnicas específicas: ' + necesidadesTecnicas);
+       doc.text(20, 150, '¿Se proporcionarán materiales adicionales? ' + materialesAdicionales);
+       doc.text(20, 160, 'Comentarios adicionales o requisitos especiales: ' + comentariosAdicionales);
+ 
+       // Guardar el PDF
+       doc.save('formulario_evento.pdf');
+     }
+   </script>
+
   
  </body>
  </html>
